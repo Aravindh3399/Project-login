@@ -1,0 +1,20 @@
+ <div class="container-fluid h-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button (click)="gotologin()" type="button" class="btn btn-primary">Logout</button>
+    </nav>  
+    <div style="background-color: #ffffff;padding: 20px 10px 5px 10px;" class="ms-1 mt-1">
+        <div class="contents" *ngFor="let user of user$|async;">
+           <h1> User Details </h1>
+            <hr>
+            <p  class="h2">Name</p>
+            <p  class="display-4">{{user.name}}</p>
+            <p  class="h2">Email</p>
+            <p  class="display-4">aravindh@gmail.com</p>
+            <p  class="h2">Mobile</p>
+            <p  class="display-4">1234567890</p>
+        </div>
+    </div>
+ 
+ <!-- <h4>List of Users</h4>
+ <div *ngfor="let user of users$|async;">{{user.Name}}</div>    -->
+

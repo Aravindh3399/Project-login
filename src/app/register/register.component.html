@@ -1,0 +1,43 @@
+<div class="container-fluid" style="width: 400px;" >
+    <mat-card class="bg-body">
+      <h1 class="text-center"> Registration </h1>
+      <form>
+        <mat-card-content>
+          <mat-label>Email</mat-label>
+          <mat-form-field class="input-group" appearance="outline">
+            <input class="input-field" matInput placeholder="Enter your email" type="text" #box required >
+          </mat-form-field>
+          <mat-label>Name</mat-label>
+          <mat-form-field class="input-group" appearance="outline">
+            <input class="input-field" matInput placeholder="Enter your Name"  required >
+          </mat-form-field>
+          <mat-label>Password</mat-label>
+          <mat-form-field class="input-group" appearance="outline">
+            <input  class="input-field" matInput placeholder="Enter your password" required [type]="hide ? 'password' : 'text'" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <mat-label>Confirm password</mat-label>
+          <mat-form-field class="input-group" appearance="outline">
+            <input class="input-field" matInput placeholder="Enter your password" required [type]="hide1 ? 'password' : 'text'" >
+            <button mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+              <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+  
+        </mat-card-content>
+        <mat-card-actions class="justify-content-center">
+           <button class="btn btn-lg w-50" type="submit" (click)="gotologin()" (click)="addUser(box.value)">REGISTER</button> 
+        </mat-card-actions>
+        <mat-card-footer class="text-center">
+          <div class="mb-3">
+            <a class="text-decoration-none" routerLinkActive="activebutton" routerLink="/login" ariaCurrentWhenActive="page"><span style="color:#5a5a5a">Already have an account?</span> Login </a>
+          </div>
+        </mat-card-footer>
+      </form>
+    </mat-card>
+  </div>
+
+
+  
